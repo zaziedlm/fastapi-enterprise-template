@@ -1,9 +1,6 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
+from pydantic import BaseModel
 
-Base = declarative_base()
-
-class UserORM(Base):
-    __tablename__ = "users"
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
+class User(BaseModel):
+    id: int
+    name: str
+    email: str
