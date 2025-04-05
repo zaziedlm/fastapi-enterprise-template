@@ -1,3 +1,4 @@
+# FastAPI entry point
 from fastapi import FastAPI
 from app.api import user
 
